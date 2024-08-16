@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Dashboard -- Users</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <section id="body">
+        <nav id="navbar">
+            <div class="img"></div>
+            <button class="link"><a href="http://127.0.0.1:8000/">Home</a></button>
+            <button class="link"><a href="http://127.0.0.1:8000/users">Tickets</a></button>
+        </nav>
+    
+        <section id="main">
+            <div id="myDIV" class="header">
+                    <h1>My To do lsit</h1>
+                    <input type="text" id="myInput" placeholder="Title...">
+                    <span onclick="newElement()" class="addBtn">Add</span>
+            </div>
+            <ul id="myUL">
+                <li>Hit the gym</li>
+                <li class="checked">Pay bills</li>
+              </ul>
+        </section>
+    </section>
+    <script src="{{ url_for('static', filename='todo.js') }}"></script>
+</body>
+</html>

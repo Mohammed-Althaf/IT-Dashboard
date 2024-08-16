@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <section id="body">
+        <nav id="navbar">
+            <div class="img"></div>
+            <button class="link"><a href="http://127.0.0.1:8000/">Home</a></button>
+            <button class="link"><a href="http://127.0.0.1:8000/users">Tickets</a></button>
+        </nav>
+    
+        <section id="main">
+            <section class="cards">
+                <div class="card countDisplay"></div>
+                <div class="card countDisplay"></div>
+                <div class="card countDisplay"></div>
+            </section>            
+            <section class="charts">
+                <canvas id="myChart" class="chart1"  style="width:100%;max-width:700px; background-color:#1c2833; margin:50px"></canvas>
+                <canvas id="myChart2" class="chart2"   style="width:100%;max-width:700px; background-color:#1c2833; margin:50px"></canvas>
+            </section>
+        </section>
+    </section>
+    <script src="{{ url_for('static', filename='charts.js') }}"></script>
+    <script src="{{ url_for('static', filename='todo.js') }}"></script>
+</body>
+</html>
